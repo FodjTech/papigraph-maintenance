@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <base href="/">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-AV9SrD7/dT5aFUNSB7tDu8uIsX/TkWcgGcZiML0Y3JE='; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; manifest-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>PAPIGRAPH — Site en maintenance</title>
+  <meta name="description" content="Le site de PAPIGRAPH fait actuellement l'objet d'une opération de maintenance. Nous restons joignables par téléphone au +225 07 08 08 64 85.">
+  <meta name="theme-color" content="#F4F5FB">
+  <meta name="color-scheme" content="light">
+  <meta name="format-detection" content="telephone=no">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PAPIGRAPH">
+  <meta property="og:title" content="PAPIGRAPH — Nous préparons quelque chose de meilleur !">
+  <meta property="og:description" content="Notre site internet est en maintenance. Merci pour votre compréhension et votre confiance.">
+  <meta property="og:image" content="https://www.papigraph.com/assets/img/logo-papigraph.png">
+  <meta property="og:locale" content="fr_FR">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preload" href="assets/fonts/outfit-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/outfit-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/img/logo-papigraph.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    /* L'intro de marque n'est jouée qu'une fois par visite */
+    try { if (sessionStorage.getItem('pg-intro')) document.documentElement.className += ' intro-seen'; else sessionStorage.setItem('pg-intro', '1'); } catch (e) {}
+  </script>
+</head>
+<body>
+  <!-- ===== Intro de marque ===== -->
+  <div class="intro" aria-hidden="true">
+    <div class="intro__mark">
+      <span class="intro__ring"></span>
+      <span class="intro__ring"></span>
+      <span class="intro__ring"></span>
+      <img src="assets/img/logo-papigraph.png" width="918" height="301" alt="">
+    </div>
+  </div>
+
+  <!-- ===== Décor d'arrière-plan ===== -->
+  <div class="backdrop" aria-hidden="true">
+    <div class="aurora aurora--1"></div>
+    <div class="aurora aurora--2"></div>
+    <div class="aurora aurora--3"></div>
+    <svg class="rings" viewBox="0 0 800 800">
+      <g fill="none" stroke="currentColor" stroke-linecap="round">
+        <circle class="ring" style="--r:0" cx="400" cy="400" r="390" pathLength="1"/>
+        <circle class="ring" style="--r:1" cx="400" cy="400" r="330" pathLength="1"/>
+        <circle class="ring" style="--r:2" cx="400" cy="400" r="270" pathLength="1"/>
+        <circle class="ring" style="--r:3" cx="400" cy="400" r="210" pathLength="1"/>
+        <circle class="ring" style="--r:4" cx="400" cy="400" r="150" pathLength="1"/>
+      </g>
+      <g class="rings__dots" fill="currentColor">
+        <circle cx="400" cy="10" r="4"/>
+        <circle cx="730" cy="400" r="3"/>
+        <circle cx="400" cy="670" r="3.5"/>
+      </g>
+    </svg>
+    <canvas class="particles"></canvas>
+    <div class="spotlight"></div>
+    <div class="vignette"></div>
+  </div>
+
+  <div class="page">
+    <!-- ===== Logo ===== -->
+    <header class="brand reveal" style="--d:0">
+      <img class="brand__logo" src="assets/img/logo-papigraph.png" width="918" height="301"
+           alt="PAPIGRAPH" fetchpriority="high">
+      <a class="brand__call" href="tel:+2250708086485">
+        <span class="brand__call-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></span>
+        +225 07 08 08 64 85
+      </a>
+    </header>
+
+    <!-- ===== Message ===== -->
+    <main class="hero">
+      <section class="hero__text">
+        <p class="status reveal" style="--d:1">
+          <span class="status__dot" aria-hidden="true"></span>
+          <span><span class="status__hello" data-greeting></span>Maintenance en cours</span>
+        </p>
+
+        <h1 class="title">
+          <span class="w" style="--i:0">Nous</span>
+          <span class="w" style="--i:1">préparons</span>
+          <span class="w" style="--i:2">quelque</span>
+          <span class="w" style="--i:3">chose</span>
+          <span class="w" style="--i:4">de</span>
+          <span class="w title__accent" style="--i:5">meilleur<svg class="title__brush" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 16C60 6 140 4 296 12" pathLength="1"/></svg></span>&nbsp;<span class="w" style="--i:6">!</span>
+        </h1>
+
+        <p class="lead reveal" style="--d:5">
+          Notre site internet fait actuellement l'objet d'une opération de maintenance afin de vous
+          offrir prochainement une expérience encore meilleure. Nos équipes travaillent à son amélioration.
+        </p>
+
+        <p class="invite reveal" style="--d:6">
+          Nous vous invitons à revenir dans quelques instants.
+          <strong>Merci pour votre compréhension et votre confiance.</strong>
+        </p>
+
+        <div class="progress reveal" style="--d:7" role="img" aria-label="Opérations d'amélioration en cours">
+          <span class="progress__bar"></span>
+        </div>
+      </section>
+
+      <!-- ===== Illustration ===== -->
+      <figure class="hero__art reveal" style="--d:3" aria-hidden="true">
+        <div class="art-halo"></div>
+        <svg class="orbit" viewBox="0 0 400 400">
+          <circle cx="200" cy="200" r="190" fill="none" stroke="currentColor" stroke-dasharray="2 9"/>
+          <circle class="orbit__dot" cx="200" cy="10" r="5"/>
+        </svg>
+        <div class="art-tilt">
+          <svg class="art" viewBox="0 0 440 380">
+            <defs>
+              <linearGradient id="g-screen" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffffff"/>
+                <stop offset="1" stop-color="#EEF0FA"/>
+              </linearGradient>
+              <linearGradient id="g-bar" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#FF3B3D"/>
+                <stop offset="1" stop-color="#C70F11"/>
+              </linearGradient>
+              <filter id="f-shadow" x="-20%" y="-20%" width="140%" height="160%">
+                <feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#1E204F" flood-opacity=".22"/>
+              </filter>
+            </defs>
+
+            <!-- Fenêtre de navigateur -->
+            <g filter="url(#f-shadow)">
+              <rect x="40" y="40" width="330" height="250" rx="18" fill="url(#g-screen)"/>
+            </g>
+            <path d="M58 40h294a18 18 0 0 1 18 18v14H40V58a18 18 0 0 1 18-18z" fill="#1E204F"/>
+            <circle cx="62" cy="56" r="4.5" fill="#E51214"/>
+            <circle cx="78" cy="56" r="4.5" fill="#fff" fill-opacity=".55"/>
+            <circle cx="94" cy="56" r="4.5" fill="#fff" fill-opacity=".3"/>
+            <rect x="118" y="50" width="160" height="12" rx="6" fill="#fff" fill-opacity=".14"/>
+
+            <!-- Contenu en reconstruction -->
+            <rect class="build build--1" x="66" y="96" width="120" height="10" rx="5" fill="#1E204F"/>
+            <rect class="build build--2" x="66" y="116" width="92" height="8" rx="4" fill="#1E204F" fill-opacity=".2"/>
+            <rect class="build build--3" x="66" y="134" width="104" height="8" rx="4" fill="#1E204F" fill-opacity=".2"/>
+            <rect class="art__skeleton" x="66" y="160" width="110" height="56" rx="10" fill="#1E204F" fill-opacity=".07"/>
+            <rect class="build build--4" x="112" y="232" width="70" height="22" rx="11" fill="url(#g-bar)"/>
+
+            <!-- Engrenages -->
+            <g class="gear gear--big" transform="translate(270 170)">
+              <g>
+                <path fill="#1E204F" d="M-8.6-58.5h17.2l3.1 12.3a46 46 0 0 1 11.6 4.8l10.9-6.5 12.2 12.2-6.5 10.9a46 46 0 0 1 4.8 11.6l12.3 3.1v17.2l-12.3 3.1a46 46 0 0 1-4.8 11.6l6.5 10.9-12.2 12.2-10.9-6.5a46 46 0 0 1-11.6 4.8l-3.1 12.3H-8.6l-3.1-12.3a46 46 0 0 1-11.6-4.8l-10.9 6.5-12.2-12.2 6.5-10.9a46 46 0 0 1-4.8-11.6l-12.3-3.1V-8.6l12.3-3.1a46 46 0 0 1 4.8-11.6l-6.5-10.9 12.2-12.2 10.9 6.5a46 46 0 0 1 11.6-4.8z"/>
+                <circle r="30" fill="#fff"/>
+                <circle r="22" fill="none" stroke="#1E204F" stroke-width="3" stroke-dasharray="3 6"/>
+                <circle r="11" fill="#1E204F"/>
+              </g>
+            </g>
+            <g class="gear gear--small" transform="translate(338 248)">
+              <g>
+                <path fill="#E51214" d="M-5.4-34h10.8l2 7.6a27 27 0 0 1 6.5 2.7l6.8-4 7.6 7.6-4 6.8a27 27 0 0 1 2.7 6.5l7.6 2v10.8l-7.6 2a27 27 0 0 1-2.7 6.5l4 6.8-7.6 7.6-6.8-4a27 27 0 0 1-6.5 2.7l-2 7.6H-5.4l-2-7.6a27 27 0 0 1-6.5-2.7l-6.8 4-7.6-7.6 4-6.8a27 27 0 0 1-2.7-6.5l-7.6-2V-5.4l7.6-2a27 27 0 0 1 2.7-6.5l-4-6.8 7.6-7.6 6.8 4a27 27 0 0 1 6.5-2.7z"/>
+                <circle r="14" fill="#fff"/>
+                <circle r="6" fill="#E51214"/>
+              </g>
+            </g>
+
+            <!-- Trait dessiné par la mascotte -->
+            <path class="scribble" d="M68 362c34-12 64 8 98-2s56-20 92-8 50 8 70 0" fill="none" stroke="#1E204F" stroke-opacity=".75" stroke-width="3" stroke-linecap="round"/>
+            <ellipse class="mascot-shadow" cx="60" cy="366" rx="34" ry="5" fill="#1E204F" fill-opacity=".14"/>
+            <!-- Mascotte officielle PAPIGRAPH -->
+            <g class="mascot">
+              <image href="assets/img/mascotte.png" x="-18" y="148" width="92" height="213"/>
+            </g>
+
+            <!-- Étincelles -->
+            <g class="spark spark--1"><path d="M398 92l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#FF3B3D"/></g>
+            <g class="spark spark--2"><path d="M24 120l2 5.5 5.5 2-5.5 2-2 5.5-2-5.5-5.5-2 5.5-2z" fill="#1E204F" fill-opacity=".45"/></g>
+            <g class="spark spark--3"><circle cx="410" cy="300" r="3.5" fill="#1E204F" fill-opacity=".35"/></g>
+          </svg>
+        </div>
+      </figure>
+    </main>
+
+    <!-- ===== Contact ===== -->
+    <section class="contact reveal" style="--d:8" aria-labelledby="contact-title">
+      <div class="contact__head">
+        <h2 id="contact-title" class="contact__title">Une question&nbsp;? Nous restons à votre écoute</h2>
+        <p class="contact__sub">Notre équipe reste joignable pendant toute la durée de la maintenance.</p>
+      </div>
+      <ul class="contact__list">
+        <li class="card">
+          <a class="card__main" href="tel:+2250708086485">
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+            </span>
+            <span class="card__body">
+              <span class="card__label">Téléphone</span>
+              <span class="card__value">+225 07 08 08 64 85</span>
+            </span>
+          </a>
+          <button class="card__btn" type="button" data-copy="+225 07 08 08 64 85" aria-label="Copier le numéro de téléphone" title="Copier le numéro">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H6a2 2 0 0 0-2 2v12h2V3h10V1zm3 4H10a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H10V7h9v14z"/></svg>
+          </button>
+        </li>
+        <li class="card">
+          <a class="card__main" href="https://www.google.com/maps/search/?api=1&amp;query=12%20rue%20de%20l%27Industrie%2C%20Zone%203%2C%20Abidjan%2C%20C%C3%B4te%20d%27Ivoire"
+             target="_blank" rel="noopener">
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+            </span>
+            <span class="card__body">
+              <span class="card__label">Adresse</span>
+              <span class="card__value card__value--wrap">12 rue de l'Industrie, Zone&nbsp;3</span>
+              <span class="card__hint">Abidjan, Côte d'Ivoire</span>
+            </span>
+            <span class="card__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="footer reveal" style="--d:9">
+      <span class="footer__line" aria-hidden="true"></span>
+      <p>© 2026 PAPIGRAPH. Tous droits réservés.</p>
+    </footer>
+  </div>
+
+  <a class="callbar" href="tel:+2250708086485">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+    Appeler PAPIGRAPH
+  </a>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
